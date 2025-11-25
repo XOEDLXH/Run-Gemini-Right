@@ -1,0 +1,39 @@
+{
+    "name":"run-gemini-with-terminal-right",
+    "displayName": "Run Gemini Right",
+    "description": "Launch Gemini CLI in a split terminal on the right side of your editor with one click",
+    "version":"0.0.2",
+    "publisher": "LiamLee",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/XOEDLXH/Run-Gemini-Right"
+    },
+    "engines":{
+        "vscode":"^1.106.2"
+    },
+    "icon": "images/RGR.png",
+    "main":"./extension.js",
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "contributes": {
+        "commands":[
+            {
+                "command": "vscode-hello.runGeminiCLI",
+                "title": "Gemini CLI: Run",
+                "icon": {
+                    "light": "./gemini-color.svg",
+                    "dark": "./gemini-color.svg"
+                }
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "command": "vscode-hello.runGeminiCLI",
+                    "group": "navigation"
+                }
+            ]
+        }
+    }
+}
